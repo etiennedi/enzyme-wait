@@ -1,0 +1,31 @@
+{
+  "name": "enzyme-wait",
+  "version": "1.0.0",
+  "description": "Wait for an async element to appear when performing integration tests with enzyme.",
+  "main": "lib/index.js",
+  "scripts": {
+    "dist": "babel index.js --out-dir lib --ignore .spec.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-node5": "^12.0.0",
+    "jest": "^18.1.0"
+  },
+  "dependencies": {
+    "assertion-error": "^1.0.2"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etiennedi/enzyme-wait.git"
+  },
+  "bugs": {
+    "url": "https://github.com/etiennedi/enzyme-wait/issues"
+  },
+  "homepage": "https://github.com/etiennedi/enzyme-wait#readme"
+}

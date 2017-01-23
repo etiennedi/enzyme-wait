@@ -1,0 +1,7 @@
+exports[`component length zero 1`] = `[AssertionError: Specified root component in waitForElement not found.]`;
+
+exports[`no component 1`] = `[AssertionError: No root component specified in waitForElement.]`;
+
+exports[`no selector 1`] = `[AssertionError: No selector specified in waitForElement.]`;
+
+exports[`run into timeout 1`] = `[AssertionError: Expected to find mockSelector within 2000ms, but it was never found.]`;
