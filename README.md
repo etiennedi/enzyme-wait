@@ -4,11 +4,11 @@ Returns a promise which resolves with the root component you perfomerd your sear
 
 ## How to use:
 
-`````
+`````javascript
 createWaitForElement(
     enzymeSelector,
-    [Optional] timeOut,
-    [Optional] intervalDuration
+    /*Optional*/ timeOut,
+    /*Optional*/  intervalDuration
 )(componentToSearchOn)
     .then( /* ... */)
     .catch( /* ... */)
@@ -16,7 +16,7 @@ createWaitForElement(
 
 ## Example Usage:
 
-`````
+`````jsx harmony
 import React from 'react';
 import { mount } from 'enzyme'
 import { createWaitForElement } from 'enzyme-wait';
@@ -47,7 +47,7 @@ resolves with the root component. This way you can create nice looking chains an
 
 Example:
 
-`````
+`````javascript
 const component = mount(<SampleComponent />)
 
 it('displays ready after multiple interactions', ()=> {
