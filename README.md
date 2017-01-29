@@ -8,10 +8,10 @@ Returns a promise which resolves with the root component you perfomerd your sear
 createWaitForElement(
     enzymeSelector,
     /*Optional*/ timeOut,
-    /*Optional*/  intervalDuration
+    /*Optional*/ intervalDuration
 )(componentToSearchOn)
-    .then( /* ... */)
-    .catch( /* ... */)
+    .then(/* ... */)
+    .catch(/* ... */)
 `````
 
 ## Example Usage:
@@ -23,20 +23,18 @@ import { createWaitForElement } from 'enzyme-wait';
 
 /**
  * The component you want to test. Assume it displays 
- * the string "Ready" after performing some async action
+ * the string "ready" after performing some async action
  * which takes time.
  */
 import SampleComponent from '...';
 
 const waitForSample = createWaitForElement('#sample-ready');
 
-const component = mount(<SampleComponent />)
+const component = mount(<SampleComponent />);
 
 it('displays ready once it is ready', ()=> {
     wait(component)
-        .then( copmonent => {
-            expect(copmonent.text()).to.include('ready')
-        });
+        .then( copmonent => expect(copmonent.text()).to.include('ready') );
 });
 `````
 
@@ -48,13 +46,13 @@ resolves with the root component. This way you can create nice looking chains an
 Example:
 
 `````javascript
-const component = mount(<SampleComponent />)
+const component = mount(<SampleComponent />);
 
 it('displays ready after multiple interactions', ()=> {
     createWaitForElement('#sample-ready')(component)
-        .then( /* do something and return a resolved promise with the comp */ );
-        .then( /* do something and return a resolved promise with the comp */ );
-        .then(createWaitForElement('#another-component-ready'))
-        .then( component => expect(component.text().to.include('ready')
+        .then( /* do something and return a resolved promise with the comp */ )
+        .then( /* do something and return a resolved promise with the comp */ )
+        .then( createWaitForElement('#another-component-ready') )
+        .then( component => expect(component.text().to.include('ready');
 });
 `````
