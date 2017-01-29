@@ -7,3 +7,5 @@ lib/
 #webstorm
 .idea/
 
+#jest
+coverage

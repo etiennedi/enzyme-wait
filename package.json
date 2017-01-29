@@ -4,7 +4,7 @@
   "description": "Wait for an async element to appear when performing integration tests with enzyme.",
   "main": "lib/index.js",
   "scripts": {
-    "dist": "babel index.js --out-dir lib --ignore .spec.js",
+    "dist": "babel ./src/ --out-dir lib --ignore .spec.js",
     "test": "jest"
   },
   "author": "",

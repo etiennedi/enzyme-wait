@@ -78,5 +78,39 @@ describe('core logic', () => {
           expect(e).toMatchSnapshot('run into timeout')
         })
     })
+  });
+
+  describe('target component ready after a couple of tries', () => {
+
+    let mockComponent;
+    beforeEach(() => {
+
+      const findMock = jest
+        .fn(()=> ({ length: 1 }))
+        .mockReturnValueOnce(()=> ({ length: 0 }))
+        .mockReturnValueOnce(()=> ({ length: 0 }))
+        .mockReturnValueOnce(()=> ({ length: 0 }));
+
+      mockComponent = {
+        find: findMock,
+        length: 1,
+      }
+    });
+
+    it('resolves after calling find on the root component with the selector', () => {
+      return wait(mockComponent)
+        .then(() => {
+          expect(mockComponent.find).toHaveBeenCalledWith('mockSelector')
+        })
+    });
+
+    it('calls find on the root component 4 times, then resolves', () => {
+      // three unsuccessful calls, then one successfull call to resolve
+
+      return wait(mockComponent)
+        .then(()=> {
+          expect(mockComponent.find).toHaveBeenCalledTimes(4)
+        })
+    });
   })
 });
