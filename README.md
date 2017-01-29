@@ -53,6 +53,6 @@ it('displays ready after multiple interactions', ()=> {
         .then( /* do something and return a resolved promise with the comp */ )
         .then( /* do something and return a resolved promise with the comp */ )
         .then( createWaitForElement('#another-component-ready') )
-        .then( component => expect(component.text().to.include('ready');
+        .then( component => expect(component.text().to.include('ready') );
 });
 `````
