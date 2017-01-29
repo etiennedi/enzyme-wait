@@ -16,7 +16,7 @@ createWaitForElement(
 
 ## Example Usage:
 
-`````jsx harmony
+`````javascript
 import React from 'react';
 import { mount } from 'enzyme'
 import { createWaitForElement } from 'enzyme-wait';
