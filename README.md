@@ -33,7 +33,7 @@ const waitForSample = createWaitForElement('#sample-ready');
 const component = mount(<SampleComponent />);
 
 it('displays ready once it is ready', ()=> {
-    wait(component)
+    waitForSample(component)
         .then( copmonent => expect(copmonent.text()).to.include('ready') );
 });
 `````
