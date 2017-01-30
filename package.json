@@ -1,6 +1,6 @@
 {
   "name": "enzyme-wait",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Wait for an async element to appear when performing integration tests with enzyme.",
   "main": "lib/index.js",
   "scripts": {
@@ -20,6 +20,9 @@
   "files": [
     "lib"
   ],
+	"keywords": [
+	  "enzyme", "waiting", "promise", "waitForElement", "react", "mount", "testing", "integration testing"
+	],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/etiennedi/enzyme-wait.git"
