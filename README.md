@@ -2,7 +2,7 @@
 Wait for an async element to appear when performing integration tests with enzyme.
 Returns a promise which resolves with the root component you performed your search on.
 
-**NEW**: There is now a fully working example repo using both Promises and async/await.
+**NEW**: There is now a [fully working example](#checking-out-the-example-repo) using both Promises and async/await.
 
 ## How to use:
 
@@ -73,6 +73,8 @@ it('displays ready after multiple interactions', ()=> {
 ## Checking out the example repo
 
 There is now a working example inside this repo using both the Promise-approach as well as the async/await-approach.
+
+The example uses Jest, but it should work with any test framework. In other frameworks you might need to call done() on asynchronous tests.
 
 To play around with this example you can:
 
