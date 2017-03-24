@@ -82,4 +82,4 @@ To play around with this example you can:
 1. run `npm install && npm run dist` on the root repo (this is required to create a lib version of this package which is listed in the example's dependencies )
 1. go to the example folder `cd example`
 1. in there, run `npm install && npm start`
-1. open your browser at `http://localhost:90000` to see the example or run `npm test` to see the tests working.
+1. open your browser at `http://localhost:9000` to see the example or run `npm test` to see the tests working.
