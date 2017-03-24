@@ -37,11 +37,10 @@
     "react-dom": "^15.4.2"
   },
   "jest": {
-    "testRegex": "\\.spec\\.(ts|tsx|js)$",
+    "testRegex": "\\.spec\\.(jsx|js)$",
     "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
+      "js",
+      "jsx"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
