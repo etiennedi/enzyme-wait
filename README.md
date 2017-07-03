@@ -36,7 +36,7 @@ const component = mount(<SampleComponent />);
 
 it('displays ready once it is ready', ()=> {
     waitForSample(component)
-        .then( copmonent => expect(copmonent.text()).to.include('ready') );
+        .then( component => expect(component.text()).to.include('ready') );
 });
 `````
 
@@ -46,7 +46,7 @@ The same as above but using async/await instead of Promises:
 `````javascript
 it('displays ready once it is ready', async ()=> {
     const componentReady = await waitForSample(component);
-    expect(copmonentReady.text()).to.include('ready');
+    expect(componentReady.text()).to.include('ready');
 });
 `````
 
