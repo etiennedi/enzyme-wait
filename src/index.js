@@ -29,7 +29,7 @@ export const createWaitForElement = (selector, maxTime = 2000, interval = 10) =>
         return reject(new AssertionError(`Expected to find ${selector} within ${maxTime}ms, but it was never found.`))
       }
 
-      const targetComponent = rootComponent.find(selector);
+      const targetComponent = rootComponent.update().find(selector);
       if (targetComponent.length) {
         clearInterval(intervalId);
         return resolve(rootComponent);
@@ -39,4 +39,3 @@ export const createWaitForElement = (selector, maxTime = 2000, interval = 10) =>
     }, interval)
   });
 };
-
