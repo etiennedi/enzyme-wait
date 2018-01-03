@@ -29,6 +29,8 @@ export const createWaitForElement = (selector, maxTime = 2000, interval = 10) =>
         return reject(new AssertionError(`Expected to find ${selector} within ${maxTime}ms, but it was never found.`))
       }
 
+      rootComponent.update();
+
       const targetComponent = rootComponent.find(selector);
       if (targetComponent.length) {
         clearInterval(intervalId);
