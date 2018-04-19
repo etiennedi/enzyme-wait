@@ -32,7 +32,7 @@ export const createWaitForElement = (selector, maxTime = 2000, interval = 10) =>
       const targetComponent = rootComponent.update().find(selector);
       if (targetComponent.length) {
         clearInterval(intervalId);
-        return resolve(rootComponent);
+        return resolve(targetComponent);
       }
 
       remainingTime = remainingTime - interval;
